@@ -1,0 +1,6 @@
+Subset,Reviews,Errors,Accuracy
+All unseen-data reviews,900,167,0.814
+Unseen spelling only (no novel word),64,1,0.984
+Contains an unseen word,836,166,0.801
+Long review (filler + late clause),278,58,0.791
+True label Mixed,300,45,0.85

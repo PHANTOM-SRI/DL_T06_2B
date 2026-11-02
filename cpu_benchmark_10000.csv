@@ -1,0 +1,7 @@
+Strategy,Model,Seed,Median total seconds (10k),Predict-only seconds (10k),Reviews/s (incl. preprocessing),Within 60 s target
+A: From scratch,SimpleRNN,42,1.902,1.308,5257.0,True
+A: From scratch,LSTM,42,3.079,2.589,3247.6,True
+A: From scratch,GRU,42,3.263,2.591,3064.6,True
+A2: Scratch + robust,SimpleRNN,42,1.93,1.311,5182.1,True
+A2: Scratch + robust,LSTM,42,3.2,2.589,3124.6,True
+A2: Scratch + robust,GRU,42,3.184,2.586,3140.5,True

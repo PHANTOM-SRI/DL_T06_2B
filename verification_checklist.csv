@@ -1,0 +1,20 @@
+Requirement,Status,Evidence
+Romanized Telugu-English corpus (no Telugu script),ACHIEVED,Telugu-script reviews: 0
+Genuine human-labelled data,NOT ACHIEVED,All labels are rule-generated; no human annotation performed
+Annotation guide and data card,ACHIEVED,Delivered as separate files (see ZIP)
+Duplicate and missing-value checks,ACHIEVED,"Duplicates: 0, missing: 0"
+Group-aware split without leakage,ACHIEVED,Group overlap asserted = empty
+Max sequence length selected by validation evidence,ACHIEVED,Selected L = 128
+"SimpleRNN, LSTM, GRU compared (scratch)",ACHIEVED,9 runs: 3 architectures x 3 seeds
+English IMDB transfer compared with scratch,ACHIEVED (substitute source),"Strategy B status: RUN; source: Pang & Lee polarity corpus v2.0 (IMDb-sourced; 1,600 train / 400 test)"
+Test Macro F1 >= 0.65,ACHIEVED,Selected model test Macro F1 = 0.9976
+Mixed-class F1 >= 0.45,ACHIEVED,Selected model test Mixed F1 = 0.9982
+"CPU inference, 10,000 reviews < 60 s",ACHIEVED,"Measured 3.200 s (CPU, incl. preprocessing)"
+Cohen's Kappa computed (model vs labels),ACHIEVED,Kappa = 0.9964
+Inter-annotator agreement,NOT ACHIEVED,Requires >=2 human annotators; not performed
+Error analysis by required categories,ACHIEVED,2 test errors analysed
+Saved model reload equivalence,ACHIEVED,Max diff = 0.00e+00
+Unseen-data challenge set (every review has an unseen token),ACHIEVED,n=900; selection used the separate unseen-validation set
+Robustness variant trained (augmentation + normalisation),ACHIEVED,9 runs: 3 architectures x 3 seeds
+Unseen-data test Macro F1 >= 0.65 (selected model),ACHIEVED,Macro F1 = 0.8116; Mixed F1 = 0.8514
+Robust variant improves unseen-data Macro F1 over baseline,ACHIEVED,best baseline 0.6208 vs best robust 0.8052 (means over 3 seeds)

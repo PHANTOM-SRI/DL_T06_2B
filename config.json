@@ -1,0 +1,85 @@
+{
+  "dataset_type": "SYNTHETIC Romanized Telugu-English (rule-labelled, not human-annotated)",
+  "labelled_rows": 6000,
+  "benchmark_rows": 10000,
+  "labels": [
+    "Mixed",
+    "Negative",
+    "Positive"
+  ],
+  "max_sequence_length": 128,
+  "sequence_candidates": [
+    64,
+    128,
+    192,
+    256
+  ],
+  "embedding_dim": 48,
+  "recurrent_units": 64,
+  "batch_size": 32,
+  "epochs_max": 12,
+  "early_stopping_patience": 2,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "final_seeds": [
+    42,
+    43,
+    44
+  ],
+  "selected_strategy": "A2: Scratch + robust",
+  "selected_model": "LSTM",
+  "selected_seed": 42,
+  "selection_metric": "mean of in-distribution validation Macro F1 and unseen-data validation Macro F1 (mean over seeds, then best seed); no test data",
+  "spelling_normalisation_used_at_inference": true,
+  "test_set_used_for_selection": false,
+  "strategy_B_status": "RUN",
+  "transfer_mapping": {
+    "source_dataset": "Pang & Lee polarity corpus v2.0 (IMDb-sourced; 1,600 train / 400 test)",
+    "source_test_accuracy": {
+      "SimpleRNN": 0.4675000011920929,
+      "LSTM": 0.5400000214576721,
+      "GRU": 0.6274999976158142
+    },
+    "source_epochs": 6,
+    "source_max_len": 256,
+    "mapped_target_tokens": 85,
+    "target_vocab_tokens": 171,
+    "mapped_fraction": 0.49707602339181284,
+    "val_test_token_coverage": 0.347256569395472,
+    "matched_examples": [
+      "lo",
+      "story",
+      "review",
+      "opinion",
+      "theatre",
+      "waiting",
+      "weekend",
+      "ticket",
+      "normal",
+      "friends",
+      "runtime",
+      "around",
+      "minutes",
+      "trailer",
+      "setting"
+    ],
+    "unmatched_examples": [
+      ".",
+      "ga",
+      "undhi",
+      ",",
+      "ki",
+      "undi",
+      "ee",
+      "naa",
+      "vyaktigata",
+      "kosam",
+      "chesam",
+      "chusanu",
+      "rates",
+      "kuda",
+      "unnay"
+    ]
+  },
+  "cpu_benchmark_seconds_10k": 3.2
+}
